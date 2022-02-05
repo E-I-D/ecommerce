@@ -13,6 +13,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
+|------------------------------------------------------------------------
+|Routes of front-end
+|-------------------------------------------------------------------------
+*/
+
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index');
+})->name('home');
+
+Route::get('/explorez-notre-marketplace', function () {
+    return view('visitor.vendor-store-grid');
+})->name('store-grid');
+
+Route::get('/liste-de-nos-vendeurs', function () {
+    return view('visitor.vendor-store-list');
+})->name('store-list');
+
+Route::get('/categorie', function () {
+    return view('visitor.category');
+})->name('category');
+
+Route::get('/nos-produit', function () {
+    return view('visitor.category-list');
+})->name('cat-list');
+
